@@ -64,7 +64,7 @@ Stillstand. Vier Fragen, alle gemessen: **(1) Präsolve** - wie viel schrumpft e
 Unzulässiges? **(4) Entartung und Störung** - hilft eine Störung gegen Nullschritte?
 """
 )
-st.caption("Kind des [Revised Simplex](https://github.com/sebastian-hanisch/revised-simplex-demo); greift die Befunde aus [Ellipsoid](https://github.com/sebastian-hanisch/ellipsoid-demo) und [Innere Punkte](https://github.com/sebastian-hanisch/innere-punkte-demo) auf. Folgestücke (PDLP, Crossover) sind [noch nicht gebaut].")
+st.caption("Kind des [Revised Simplex](https://github.com/sebastian-hanisch/revised-simplex-demo); greift die Befunde aus [Ellipsoid](https://github.com/sebastian-hanisch/ellipsoid-demo) und [Innere Punkte](https://github.com/sebastian-hanisch/innere-punkte-demo) auf. Folgestücke sind gebaut: [PDLP](https://github.com/sebastian-hanisch/pdlp-demo) und [Crossover](https://github.com/sebastian-hanisch/crossover-demo).")
 
 with st.expander("Was Präsolve, Skalierung und die Toleranzen tun", expanded=True):
     st.markdown(
@@ -284,6 +284,6 @@ Implementiert in `pre_presolve.py` (Regeln, Postsolve), `pre_scaling.py`, `pre_s
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Lineare Programmierung: vom Tableau zum Crossover](https://sebastianhanisch.net/konzepte-lineare-programmierung.html)."
 )
