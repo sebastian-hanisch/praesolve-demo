@@ -17,7 +17,7 @@ def test_readme_presolve_yield_over_the_dirt_level():
     assert [(rows[r]["rows_before"], rows[r]["rows_after"]) for r in C.REDUNDANCIES] == [(6, 6), (13, 8), (17, 10), (24, 11), (31, 9)]
     assert [(rows[r]["cols_before"], rows[r]["cols_after"]) for r in C.REDUNDANCIES] == [(8, 8), (8, 7), (9, 7), (10, 6), (10, 5)]
     assert [(rows[r]["nnz_before"], rows[r]["nnz_after"]) for r in C.REDUNDANCIES] == [(29, 29), (42, 27), (53, 29), (61, 26), (80, 18)]
-    assert [(round(rows[r]["pivots_before"]), round(rows[r]["pivots_after"])) for r in C.REDUNDANCIES] == pytest.approx([(5, 5), (5, 3), (6, 4), (10, 4), (12, 3)], abs=1.5)
+    assert [x for r in C.REDUNDANCIES for x in (round(rows[r]["pivots_before"]), round(rows[r]["pivots_after"]))] == pytest.approx([5, 5, 5, 3, 6, 4, 10, 4, 12, 3], abs=1.5)
     assert all(rows[r]["ok"] == 5 for r in rows)
 
 
