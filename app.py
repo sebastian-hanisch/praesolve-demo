@@ -139,7 +139,7 @@ if a.piped_ok:
     st.success(f"✅ Ergebnis richtig: **{STATUS_TEXT.get(piped.status, piped.status)}**" + (f" {num(a.ref_obj)}" if piped.status == "optimal" else "") + f" (Referenz: Zweierpotenz-Skalierung; Instanz {inst.m} × {inst.n}).")
 else:
     if piped.status == "optimal" and a.ref_status == "optimal":
-        st.warning(f"⚠️ Ergebnis falsch: Wert {num(piped.obj)} gegen Referenz {num(a.ref_obj)}, relative Unzulässigkeit {sci(piped.rel_infeas)}. Mit diesen Einstellungen trägt die Numerik nicht.")
+        st.warning(f"⚠️ Ergebnis falsch: Wert {num(piped.obj)} gegen Referenz {num(a.ref_obj)}, relative Unzulässigkeit {sci(piped.rel_infeas)}. Mit diesen Einstellungen reicht die Numerik nicht.")
     else:
         st.warning(f"⚠️ Ergebnis falsch: {STATUS_TEXT.get(piped.status, piped.status)} gegen Referenz {STATUS_TEXT.get(a.ref_status, a.ref_status)}.")
 if not a.plain_ok and piped.status != "":
